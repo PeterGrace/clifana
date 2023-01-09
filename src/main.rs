@@ -13,8 +13,7 @@ use query::execute_query;
 extern crate log;
 
 
-#[tokio::main]
-async fn main() -> anyhow::Result<()> {
+fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
     let config = ConfigFile::new(cli.config)?;
 
@@ -32,7 +31,7 @@ async fn main() -> anyhow::Result<()> {
 
     match &cli.command {
       crate::cli::Commands::Query(args) => {
-        execute_query(&config, args).await?;
+        execute_query(&config, args)?;
       }
     };
     Ok(())
