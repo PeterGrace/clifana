@@ -13,3 +13,6 @@ Cargo.lock
 # Added by cargo
 
 /target
+
+# since pete has his local prom targeted for testing
+config.toml

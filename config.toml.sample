@@ -1,0 +1,12 @@
+# log_level is 0 for warn, 1 for info, 2 for debug.
+log_level = 2
+
+[[servers]]
+name = "default"
+url = "http://prometheus:9090"
+
+[[queries]]
+name = "cpu"
+query = """
+    sum(rate(process_cpu_seconds_total{pod=~"{{podex}}"}[1m]))
+"""
