@@ -16,3 +16,4 @@ Cargo.lock
 
 # since pete has his local prom targeted for testing
 config.toml
+/clifana.log
