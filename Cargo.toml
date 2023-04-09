@@ -21,6 +21,13 @@ crossterm = "0.26.1"
 better-panic = "0.3.0"
 fern = "0.6.2"
 itertools = "0.10.5"
+humantime = "2.1.0"
+prometheus-http-query = "0.6.5"
+
+[dependencies.tokio]
+version = "1.24.1"
+features = [ "rt-multi-thread", "macros"]
+
 [dependencies.tui-menu]
 version = "0.1.2"
 path = "../tui-menu"

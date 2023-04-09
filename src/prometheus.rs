@@ -1,11 +1,10 @@
 use serde::Deserialize;
-
 //{"status":"success","data":{"resultType":"vector","result":[]}}
 
 #[derive(Deserialize, Debug)]
 pub struct Points {
     pub metric: serde_json::Value,
-    pub value: Vec<serde_json::Value>
+    pub values: Vec<serde_json::Value>
 }
 
 #[derive(Deserialize, Debug)]
